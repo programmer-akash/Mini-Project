@@ -130,35 +130,8 @@ python --version   # Ensure Python 3.x is installed
 
 <img width="320" height="376" alt="image" src="https://github.com/user-attachments/assets/1ffb5261-51a6-444b-8066-089f872e4030" />
 
-```
 
-
-
-========================================
-       🧮  PYTHON CALCULATOR
-========================================
-  Basic Operations:
-   1. Addition       (+)
-   2. Subtraction    (-)
-   3. Multiplication (*)
-   4. Division       (/)
-   5. Modulus        (%)
-
-  Statistical Operations:
-   6. Mean
-   7. Median
-   8. Mode
-   9. Average (same as Mean)
-
-   0. Exit
-========================================
-Select an option (0-9): 7
-
-Enter numbers separated by spaces: 4 8 15 16 23 42
-
-  Numbers : [4.0, 8.0, 15.0, 16.0, 23.0, 42.0]
-  Median  : 15.5
-```
+<img width="411" height="445" alt="image" src="https://github.com/user-attachments/assets/4e94792f-9af6-4d79-8a17-4c40d2672262" />
 
 ---
 
