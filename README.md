@@ -1,200 +1,190 @@
-# 🧮 Advanced Python Calculator
+# 🧮 Python Calculator — CLI Based
 
-A feature-rich command-line calculator built with Python, supporting both basic arithmetic and statistical operations — with clean input validation and an interactive menu interface.
-
----
-
-## 📌 Project Overview
-
-This mini project implements an **interactive CLI calculator** using core Python concepts including functions, loops, conditionals, type casting, and exception handling. It uses Python's built-in `statistics` module to support statistical operations beyond standard arithmetic.
+![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
+![Statistics](https://img.shields.io/badge/Statistics-Module-green?logo=python&logoColor=white)
+![CLI](https://img.shields.io/badge/Interface-CLI-black)
+![License](https://img.shields.io/badge/License-MIT-yellow)
 
 ---
 
-## 🎯 Objective
+## 📌 Overview
 
-> Build a user-friendly terminal calculator that handles arithmetic operations, statistical computations, edge cases (like division by zero), and invalid inputs — all through a clean, menu-driven interface.
+This project implements a **fully functional command-line calculator** built in Python. It supports both **basic arithmetic operations** and **statistical computations**, demonstrating core Python programming concepts such as user input, type casting, functions, loops, and use of the built-in `statistics` module.
 
 ---
 
-## 📂 Repository Structure
+## 🎯 Objectives
 
-```
-├── calculator.py     # Main calculator script
-└── README.md
-```
+- Accept and process **user input** via the terminal
+- Apply **type casting** to convert string inputs into numeric types
+- Implement all standard **arithmetic operations** (`+`, `-`, `*`, `/`, `%`)
+- Perform **statistical calculations** (Mean, Median, Mode, Average)
+- Handle **edge cases** like division by zero and invalid input gracefully
+- Practice Python fundamentals through a real, interactive project
 
 ---
 
 ## ⚙️ Features
 
-| Category | Operations |
+| Feature | Description |
 |---|---|
-| **Basic Arithmetic** | Addition `+`, Subtraction `-`, Multiplication `*`, Division `/` |
-| **Advanced Arithmetic** | Modulus `%` |
-| **Statistical** | Mean, Median, Mode, Average |
-| **Error Handling** | Division by zero, Modulus by zero, invalid input, no-mode detection |
-| **Multi-number Input** | Space-separated number lists for statistical functions |
+| ➕ Addition | Sum of two numbers |
+| ➖ Subtraction | Difference of two numbers |
+| ✖️ Multiplication | Product of two numbers |
+| ➗ Division | Quotient of two numbers |
+| **%** Modulus | Remainder of division |
+| 📊 Mean | Average of a list of numbers |
+| 📊 Median | Middle value of a sorted list |
+| 📊 Mode | Most frequently occurring value(s) |
+| 📊 Average | Alias for Mean |
 
 ---
 
-## 🔧 Tech Stack
+## 🛠️ Tech Stack
 
-- **Language:** Python 3
-- **Environment:** Terminal / VS Code / Any Python IDE
-- **Libraries:**
-  - `statistics` — mean, median, mode, multimode (standard library)
-  - No external dependencies required
+- **Python 3.x**
+- **`statistics`** module — for Mean, Median, Mode calculations
+- **No external libraries required**
 
 ---
 
-## 🧪 Program Workflow
+## 📋 Project Workflow
 
-The calculator follows a clean modular design with 4 dedicated functions:
+### Step 1 — Display Menu
+A numbered menu is printed to the terminal listing all available operations (0–9).
 
-1. **`display_menu()`** — Renders the formatted options menu
-2. **`get_two_numbers()`** — Prompts and validates two numeric inputs for arithmetic
-3. **`get_numbers()`** — Prompts and validates a list of space-separated numbers for statistics
-4. **`run_calculator()`** — Main loop that drives the entire program with choice routing
+### Step 2 — Take User Input
+The user selects an operation by entering a number. Input is read as a string using `input()`.
 
----
+### Step 3 — Type Casting
+All numeric inputs are cast from `str → float` using `float()`, enabling decimal support for all operations.
 
-## 📋 Menu Options
+### Step 4 — Perform Operation
+Based on the user's choice, the corresponding function is called:
+- **Basic ops** take two numbers
+- **Statistical ops** take a space-separated list of numbers
 
-```
-========================================
-       🧮  PYTHON CALCULATOR
-========================================
-  Basic Operations:
-   1. Addition       (+)
-   2. Subtraction    (-)
-   3. Multiplication (*)
-   4. Division       (/)
-   5. Modulus        (%)
+### Step 5 — Display Result
+The result is printed in a clean, readable format.
 
-  Statistical Operations:
-   6. Mean
-   7. Median
-   8. Mode
-   9. Average (same as Mean)
-
-   0. Exit
-========================================
-```
+### Step 6 — Loop / Exit
+The calculator loops back to the menu until the user selects `0` to exit.
 
 ---
 
-## 📈 Sample Output
+## 🐍 Python Concepts Practiced
 
-The screenshot below shows the calculator running live in the terminal — menu display followed by an Addition operation:
-
-![Calculator Terminal Output](https://github.com/user-attachments/assets/e65864d2-3f9e-41fb-9536-f0390399ce15)
-
-**Additional example outputs:**
-
-```
-========================================
-       🧮  PYTHON CALCULATOR
-========================================
-  Basic Operations:
-   1. Addition       (+)
-   2. Subtraction    (-)
-   3. Multiplication (*)
-   4. Division       (/)
-   5. Modulus        (%)
-
-  Statistical Operations:
-   6. Mean
-   7. Median
-   8. Mode
-   9. Average (same as Mean)
-
-   0. Exit
-========================================
-Select an option (0-9): 1
-Enter first number : 10
-Enter second number: 5
-
-  10.0 + 5.0 = 15.0
-
-Press Enter to continue...
-```
-
-```
-Select an option (0-9): 8
-Enter numbers separated by spaces: 3 3 5 7 7 7
-
-  Numbers : [3.0, 3.0, 5.0, 7.0, 7.0, 7.0]
-  Mode    : 7.0
-
-Press Enter to continue...
-```
-
-```
-Select an option (0-9): 4
-Enter first number : 9
-Enter second number: 0
-
-  ❌ Error: Division by zero is not allowed.
-
-Press Enter to continue...
-```
-
-```
-Select an option (0-9): 0
-
-  👋 Goodbye! Thanks for using the calculator.
-```
+| Concept | Usage |
+|---|---|
+| `input()` | Capturing all user input from the terminal |
+| **Type Casting** | `float(input(...))`, `list(map(float, ...))` |
+| `while` loop | Keeps calculator running until exit |
+| `if / elif / else` | Branching logic for menu choices |
+| **Functions** | Modular functions for input, menu, and operations |
+| **Error Handling** | `try / except ValueError` for invalid inputs |
+| `statistics` module | `mean()`, `median()`, `mode()`, `multimode()` |
+| **f-strings** | Clean result formatting |
 
 ---
 
-## 🔍 Key Concepts Used
+## 🔍 Key Highlights
 
-- **Functions** — Modular design with four reusable helper functions
-- **while True loop with break** — Keeps the calculator running until the user exits
-- **try / except** — Catches invalid (non-numeric) input gracefully
-- **Type casting** — `float()` conversion via `map()` for multi-number input
-- **f-Strings** — Clean formatted output for results
-- **list() + map()** — Parsing space-separated number input into a float list
-- **multimode()** — Handles datasets with multiple modes or no mode correctly
-- **`if __name__ == "__main__"`** — Entry point guard for safe module importing
+- All inputs are captured as strings and **explicitly cast** to `float`, making the concept of type casting central to the project
+- The **modulus (`%`)** operation is included as both an arithmetic and practical concept
+- `multimode()` is used instead of `mode()` to correctly handle datasets with **multiple modes or no mode**
+- Division and modulus by zero are caught and reported with a user-friendly error message
+- Invalid non-numeric input triggers a `ValueError` which is caught and handled cleanly
 
 ---
 
 ## 🚀 Getting Started
 
-### Run Locally
+### Prerequisites
+
+No external packages needed — uses Python's standard library only.
 
 ```bash
-# Clone the repository
-git clone https://github.com/your-username/python-calculator.git
-cd python-calculator
-
-# Run the calculator
-python calculator.py
+python --version   # Ensure Python 3.x is installed
 ```
 
-> No pip installs needed — uses Python's standard library only.
+### Run the Calculator
+
+1. Clone this repository:
+   ```bash
+   git clone https://github.com/programmer-akash/your-repo-name.git
+   ```
+
+2. Navigate into the project folder:
+   ```bash
+   cd your-repo-name
+   ```
+
+3. Run the script:
+   ```bash
+   python calculator.py
+   ```
 
 ---
 
-## 📋 Requirements
+## 🖥️ Sample Output
 
 ```
-Python 3.x (no external libraries required)
+========================================
+       🧮  PYTHON CALCULATOR
+========================================
+  Basic Operations:
+   1. Addition       (+)
+   2. Subtraction    (-)
+   3. Multiplication (*)
+   4. Division       (/)
+   5. Modulus        (%)
+
+  Statistical Operations:
+   6. Mean
+   7. Median
+   8. Mode
+   9. Average (same as Mean)
+
+   0. Exit
+========================================
+Select an option (0-9): 7
+
+Enter numbers separated by spaces: 4 8 15 16 23 42
+
+  Numbers : [4.0, 8.0, 15.0, 16.0, 23.0, 42.0]
+  Median  : 15.5
+```
+
+---
+
+## 📁 Repository Structure
+
+```
+📦 your-repo-name
+ ┣ 🐍 calculator.py    # Main calculator script
+ ┗ 📄 README.md        # Project documentation
 ```
 
 ---
 
 ## 🤝 Contributing
 
-Pull requests are welcome. For major changes, please open an issue first to discuss what you'd like to change.
+Contributions, suggestions, and improvements are welcome! Feel free to open an issue or submit a pull request.
 
 ---
 
 ## 📄 License
 
-This project is open source and available under the [MIT License](LICENSE).
+This project is open-source and available under the [MIT License](LICENSE).
 
 ---
 
-*Built with ❤️ using Python*
+## 👤 Author
+
+**AKASH HALDER**
+- GitHub: [@programmer-akash](https://github.com/programmer-akash)
+- LinkedIn: [coder-akash-halder](https://www.linkedin.com/in/coder-akash-halder/)
+
+---
+
+> *"Any fool can write code that a computer can understand. Good programmers write code that humans can understand."* — Martin Fowler
