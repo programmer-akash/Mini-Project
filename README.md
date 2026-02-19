@@ -128,6 +128,8 @@ python --version   # Ensure Python 3.x is installed
 
 ## 🖥️ Sample Output
 
+<img width="320" height="376" alt="image" src="https://github.com/user-attachments/assets/1ffb5261-51a6-444b-8066-089f872e4030" />
+
 ```
 ========================================
        🧮  PYTHON CALCULATOR
@@ -160,7 +162,7 @@ Enter numbers separated by spaces: 4 8 15 16 23 42
 ## 📁 Repository Structure
 
 ```
-📦 your-repo-name
+📦 Mini Project
  ┣ 🐍 calculator.py    # Main calculator script
  ┗ 📄 README.md        # Project documentation
 ```
