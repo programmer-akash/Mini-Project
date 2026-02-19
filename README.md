@@ -1,4 +1,4 @@
-# 🧮 Python Calculator — CLI Based
+# 🧮 Python Calculator 
 
 ![Python](https://img.shields.io/badge/Python-3.x-blue?logo=python&logoColor=white)
 ![Statistics](https://img.shields.io/badge/Statistics-Module-green?logo=python&logoColor=white)
